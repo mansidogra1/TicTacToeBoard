@@ -25,7 +25,7 @@ Piece TicTacToeBoard::toggleTurn()
   }
   else
   {
-  return turn = X;
+    return turn = X;
   }
 }
 
