@@ -17,7 +17,7 @@ class TicTacToeBoardTest : public ::testing::Test
 TEST(TicTacToeBoardTest, unitTestName)
 {
 	TicTacToeBoard testBoard; 
-	ASSERT_FALSE(X == tic.toggleTurn()); 
+	ASSERT_FALSE(X == testBoard.toggleTurn()); 
 }
 
 /* EXAMPLE TEST FORMAT

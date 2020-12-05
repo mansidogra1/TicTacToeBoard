@@ -1,0 +1,75 @@
+        -:    0:Source:TicTacToeBoard.cpp
+        -:    0:Programs:2
+        -:    1:#include "TicTacToeBoard.h"
+        -:    2:/**
+        -:    3: * Class for representing a 3x3 Tic-Tac-Toe game board, using the Piece enum
+        -:    4: * to represent the spaces on the board.
+        -:    5:**/
+        -:    6:
+        -:    7://Constructor sets an empty board and specifies it is X's turn first
+function _ZN14TicTacToeBoardC2Ev called 1 returned 100% blocks executed 100%
+        1:    8:TicTacToeBoard::TicTacToeBoard()
+        -:    9:{
+        1:   10:  turn = X;
+        4:   11:  for(int i=0; i<BOARDSIZE; i++)
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+       12:   12:    for(int j=0; j<BOARDSIZE; j++)
+branch  0 taken 9 (fallthrough)
+branch  1 taken 3
+        9:   13:      board[i][j] = Blank;
+        1:   14:}
+        -:   15:
+        -:   16:/**
+        -:   17: * Switches turn member variable to represent whether it's X's or O's turn
+        -:   18: * and returns whose turn it is
+        -:   19:**/
+function _ZN14TicTacToeBoard10toggleTurnEv called 1 returned 100% blocks executed 75%
+        1:   20:Piece TicTacToeBoard::toggleTurn()
+        -:   21:{
+        1:   22:  if(turn == X)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        -:   23:  {
+        1:   24:    return turn = O;
+        -:   25:  }
+        -:   26:  else
+        -:   27:  {
+    #####:   28:    return turn = X;
+        -:   29:  }
+        -:   30:}
+        -:   31:
+        -:   32:/**
+        -:   33: * Places the piece of the current turn on the board, returns what
+        -:   34: * piece is placed, and toggles which Piece's turn it is. placePiece does 
+        -:   35: * NOT allow to place a piece in a location where there is already a piece.
+        -:   36: * In that case, placePiece just returns what is already at that location. 
+        -:   37: * Out of bounds coordinates return the Piece Invalid value. When the game
+        -:   38: * is over, no more pieces can be placed so attempting to place a piece
+        -:   39: * should neither change the board nor change whose turn it is.
+        -:   40:**/ 
+function _ZN14TicTacToeBoard10placePieceEii called 0 returned 0% blocks executed 0%
+    #####:   41:Piece TicTacToeBoard::placePiece(int row, int column)
+        -:   42:{
+    #####:   43:  return Invalid;
+        -:   44:}
+        -:   45:
+        -:   46:/**
+        -:   47: * Returns what piece is at the provided coordinates, or Blank if there
+        -:   48: * are no pieces there, or Invalid if the coordinates are out of bounds
+        -:   49:**/
+function _ZN14TicTacToeBoard8getPieceEii called 0 returned 0% blocks executed 0%
+    #####:   50:Piece TicTacToeBoard::getPiece(int row, int column)
+        -:   51:{
+    #####:   52:  return Invalid;
+        -:   53:}
+        -:   54:
+        -:   55:/**
+        -:   56: * Returns which Piece has won, if there is a winner, Invalid if the game
+        -:   57: * is not over, or Blank if the board is filled and no one has won.
+        -:   58:**/
+function _ZN14TicTacToeBoard9getWinnerEv called 0 returned 0% blocks executed 0%
+    #####:   59:Piece TicTacToeBoard::getWinner()
+        -:   60:{
+    #####:   61:  return Invalid;
+        -:   62:}
