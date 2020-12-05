@@ -14,6 +14,12 @@ class TicTacToeBoardTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
+TEST(TicTacToeBoardTest, invalidPlace)
+{
+	TicTacToeBoard testBoard; 
+	ASSERT_EQ( testBoard.placePiece(4,1) , Invalid ); 
+}
+
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
 {
