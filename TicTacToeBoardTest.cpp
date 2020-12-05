@@ -17,7 +17,7 @@ class TicTacToeBoardTest : public ::testing::Test
 TEST(TicTacToeBoardTest, invalidPlace)
 {
 	TicTacToeBoard testBoard; 
-	ASSERT_EQ( testBoard.placePiece(4,1) , Invalid ); 
+	ASSERT_FALSE(X == tic.toggleTurn()); 
 }
 
 /* EXAMPLE TEST FORMAT
