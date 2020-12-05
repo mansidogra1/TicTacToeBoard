@@ -14,7 +14,7 @@ class TicTacToeBoardTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-TEST(TicTacToeBoardTest, invalidPlace)
+TEST(TicTacToeBoardTest, unitTestName)
 {
 	TicTacToeBoard testBoard; 
 	ASSERT_FALSE(X == tic.toggleTurn()); 
